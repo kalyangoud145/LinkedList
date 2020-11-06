@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text;
 
 namespace LinkedListProject
 {
-    /// <summary>
-    /// Implementation class
-    /// </summary>
-    public class LinkedList
+    public class SortedLinkedList
     {
         public Node head;
-        public LinkedList()
+        public SortedLinkedList()
         {
             this.head = null;
         }
         /// <summary>
-        /// Adds the specified data.
+        /// Adds the specified item.
         /// </summary>
-        /// <param name="data">The data.</param>
-        public void Add(int data)
+        /// <param name="item">The item.</param>
+        /// <returns></returns>
+        public void Add(int item)
         {
-            Node node = new Node(data);
-            if (head == null)
+            Node node = new Node(item);
+            Node current = head, previous = null;
+            while (current != null && current.data < node.data)
             {
-                head = node;
+                previous = current;
+                current = current.next;
             }
+            if (previous == null)
+                head = node;
             else
             {
-                node.next = head;
-                head = node;
+                previous.next = node;
             }
-            Console.WriteLine("{0} inserted into the linked list", node.data);
+            node.next = current;
         }
         /// <summary>
         /// Appends the specified item.
@@ -151,42 +151,6 @@ namespace LinkedListProject
                 }
                 return false;
             }
-        }
-        /// <summary>
-        /// Deletes the specified item.
-        /// </summary>
-        /// <param name="item">The item.</param>
-        public void Delete(int item)
-        {
-            Node temp = head, previous = null;
-            if (temp != null && temp.data == item)
-            {
-                head = temp.next;
-                return;
-            }
-            while (temp != null && temp.data != item)
-            {
-                previous = temp;
-                temp = temp.next;
-            }
-            if (temp == null)
-                return;
-            previous.next = temp.next;
-        }
-        /// <summary>
-        /// Gives size of list
-        /// </summary>
-        /// <returns></returns>
-        public int Size()
-        {
-            int size = 0;
-            Node temp = head;
-            while (temp != null)
-            {
-                size++;
-                temp = temp.next;
-            }
-            return size;
         }
         /// <summary>
         /// Displays this instance.
