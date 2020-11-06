@@ -117,6 +117,5 @@ namespace LinkedListTest
             //Assert
             Assert.AreNotEqual(expected, result);
         }
-
     }
 }
