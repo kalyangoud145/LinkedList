@@ -108,6 +108,29 @@ namespace LinkedList
             }
         }
         /// <summary>
+        /// Pops the last element
+        /// </summary>
+        /// <returns></returns>
+        internal Node PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Empty LinkedList");
+                return null;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Node finalNode = temp.next;
+                temp.next = null;
+                return finalNode;
+            }
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         internal void Display()
