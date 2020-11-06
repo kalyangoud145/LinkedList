@@ -14,6 +14,41 @@ namespace LinkedList
         {
             this.head = null;
         }
+        /// <summary>
+        /// Adds the specified data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        internal void Add(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                node.next = head;
+                head = node;
+            }
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
+        /// <summary>
+        /// Displays this instance.
+        /// </summary>
+        internal void Display()
+        {
+            if (head == null)
+                System.Console.WriteLine("List is Empty");
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    Console.Write(temp.data + "\n");
+                    temp = temp.next;
+                }
+            }
+        }
 
     }
 }
