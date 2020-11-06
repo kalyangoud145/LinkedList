@@ -11,9 +11,10 @@ namespace LinkedList
         {
             LinkedList linkedList = new LinkedList();
             linkedList.Add(56);
-            linkedList.Append(30);
-            linkedList.Append(70);
-            linkedList.Display();
+            linkedList.Add(70);
+            //linkedList.Display();
+            linkedList.Insert(2, 30);
+           linkedList.Display();
         }
     }
 }
