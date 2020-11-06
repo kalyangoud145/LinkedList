@@ -90,6 +90,24 @@ namespace LinkedList
             }
         }
         /// <summary>
+        /// Deletes element at the beginning
+        /// </summary>
+        /// <returns></returns>
+        internal Node Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty");
+                return null;
+            }
+            else
+            {
+                Node popped = head;
+                head = head.next;
+                return popped;
+            }
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         internal void Display()
