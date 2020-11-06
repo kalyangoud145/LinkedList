@@ -2,14 +2,18 @@
 
 namespace LinkedList
 {
+    /// <summary>
+    /// Main class
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            //Creating simple linked list
-            Node head = new Node(56);
-            head.next = new Node(30);
-            head.next.next = new Node(70);
+            LinkedList linkedList = new LinkedList();
+            linkedList.Add(70);
+            linkedList.Add(30);
+            linkedList.Add(56);
+            linkedList.Display();
         }
     }
 }
