@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace LinkedList
+namespace LinkedListProject
 {
     /// <summary>
     /// Main class
     /// </summary>
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -13,9 +13,9 @@ namespace LinkedList
             linkedList.Add(70);
             linkedList.Add(30);
             linkedList.Add(56);
-            linkedList.PopLast();
-            Console.WriteLine("Elements after removing end element");
             linkedList.Display();
+            Console.WriteLine(linkedList.Search(312000));
+
         }
     }
 }

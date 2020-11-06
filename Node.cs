@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LinkedList
+namespace LinkedListProject
 {
     /// <summary>
     /// Node class 
     /// </summary>
-    class Node
+    public class Node
     {
-        public  int data;
+        public int data;
         public Node next;
         public Node(int data)
         {
