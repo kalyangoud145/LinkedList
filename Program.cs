@@ -6,7 +6,10 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Linked list");
+            //Creating simple linked list
+            Node head = new Node(56);
+            head.next = new Node(30);
+            head.next.next = new Node(70);
         }
     }
 }
