@@ -131,6 +131,27 @@ namespace LinkedList
             }
         }
         /// <summary>
+        /// Searches the specified element.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        /// <returns></returns>
+        public bool Search(int data)
+        {
+            if (head == null)
+                return false;
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == data)
+                        return true;
+                    temp = temp.next;
+                }
+                return false;
+            }
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         internal void Display()
