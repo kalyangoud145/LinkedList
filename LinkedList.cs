@@ -33,6 +33,27 @@ namespace LinkedList
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
         /// <summary>
+        /// Appends the specified item.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        /// <returns></returns>
+        internal void Append(int item)
+        {
+            Node node = new Node(item);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} appended to the linked list", node.data);
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         internal void Display()
@@ -49,6 +70,5 @@ namespace LinkedList
                 }
             }
         }
-
     }
 }
