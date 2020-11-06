@@ -153,6 +153,42 @@ namespace LinkedListProject
             }
         }
         /// <summary>
+        /// Deletes the specified item.
+        /// </summary>
+        /// <param name="item">The item.</param>
+        public void Delete(int item)
+        {
+            Node temp = head, previous = null;
+            if (temp != null && temp.data == item)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != item)
+            {
+                previous = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            previous.next = temp.next;
+        }
+        /// <summary>
+        /// Gives size of list
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            int size = 0;
+            Node temp = head;
+            while (temp != null)
+            {
+                size++;
+                temp = temp.next;
+            }
+            return size;
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         public void Display()

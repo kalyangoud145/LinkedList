@@ -13,8 +13,9 @@ namespace LinkedListProject
             linkedList.Add(70);
             linkedList.Add(30);
             linkedList.Add(56);
+            linkedList.Delete(56);
+            Console.WriteLine("Size of list is: "+linkedList.Size());
             linkedList.Display();
-            Console.WriteLine(linkedList.Search(312000));
 
         }
     }
