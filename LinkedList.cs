@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
-namespace LinkedList
+namespace LinkedListProject
 {
     /// <summary>
     /// Implementation class
     /// </summary>
-    class LinkedList
+    public class LinkedList
     {
         public Node head;
         public LinkedList()
@@ -18,7 +19,7 @@ namespace LinkedList
         /// Adds the specified data.
         /// </summary>
         /// <param name="data">The data.</param>
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (head == null)
@@ -37,7 +38,7 @@ namespace LinkedList
         /// </summary>
         /// <param name="item">The item.</param>
         /// <returns></returns>
-        internal void Append(int item)
+        public void Append(int item)
         {
             Node node = new Node(item);
             if (head == null)
@@ -58,7 +59,7 @@ namespace LinkedList
         /// </summary>
         /// <param name="position">The position.</param>
         /// <param name="item">The item.</param>
-        internal void Insert(int position, int data)
+        public void Insert(int position, int data)
         {
             Node node = new Node(data);
             if (position < 1)
@@ -93,7 +94,7 @@ namespace LinkedList
         /// Deletes element at the beginning
         /// </summary>
         /// <returns></returns>
-        internal Node Pop()
+        public Node Pop()
         {
             if (head == null)
             {
@@ -111,7 +112,7 @@ namespace LinkedList
         /// Pops the last element
         /// </summary>
         /// <returns></returns>
-        internal Node PopLast()
+        public Node PopLast()
         {
             if (head == null)
             {
@@ -154,7 +155,7 @@ namespace LinkedList
         /// <summary>
         /// Displays this instance.
         /// </summary>
-        internal void Display()
+        public void Display()
         {
             if (head == null)
                 System.Console.WriteLine("List is Empty");
